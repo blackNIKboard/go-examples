@@ -5,7 +5,6 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"net/http"
-	"os"
 )
 
 var index = `
@@ -32,8 +31,6 @@ var index = `
 `
 
 func main() {
-	_ = os.Args[1]
-	port := os.Args[2]
 	e := echo.New()
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
@@ -41,5 +38,5 @@ func main() {
 		return c.HTML(http.StatusOK, fmt.Sprintf(index, c.Request().RequestURI))
 	})
 
-	e.Logger.Fatal(e.Start(port))
+	e.Logger.Fatal(e.Start(":8080"))
 }

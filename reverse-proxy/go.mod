@@ -8,5 +8,5 @@ require (
 	github.com/labstack/gommon v0.3.0 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/valyala/fasttemplate v1.2.1 // indirect
-	golang.org/x/net v0.0.0-20201009032441-dbdefad45b89
+	golang.org/x/net v0.0.0-20201009032441-dbdefad45b89 // indirect
 )
